@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form</title>
+<style type="text/css">
+.marry
+{
+  background-color:#ffff99;
+  color:#9900ff;
+  border-radius:5px;
+  text-align:center;
+  margin-left:200px;
+  margin-right:200px;
+  input-text:center;
+  padding:10px 20px ;
+  border:2px solid red;
+  }
+   input[type=email]:focus {
+  width: 50%;
+  }
+  input[type=password]:focus {
+  width: 50%;
+  }
+</style>
+</head>
+<body>
+<div class=marry>
+<h1 style="color:red;text-align:center">Enter Email-id & Password</h1>
+<h2 style="color:blue;text-align:center">Check Password Strength Of Your Account Automatically,After Enter the Password</h2>
+<form action="FormApp" method="post" name="fr" >
+<label>Enter Email-id</label><br><input type="email" name="mail" class="marry"><br>
+<label>Enter Password</label><br><input type="password" name="pass" onblur="submit()" class="marry"/>
+</form></div>
+</body>
+</html>
