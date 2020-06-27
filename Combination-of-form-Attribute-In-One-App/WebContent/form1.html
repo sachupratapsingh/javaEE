@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+.marry
+{
+  background-color:#ffff99;
+  color:#9900ff;
+  border-radius:5px;
+  text-align:center;
+  margin-left:200px;
+  margin-right:200px;
+  input-text:center;
+  padding:10px 20px ;
+  border:2px solid red;
+  opacity:0.8;
+  }
+  .but
+  {
+  background-color:#4CAF50;
+  border-radius:5px;
+  text-align:center;
+  padding:10px 20px ;
+  color:white;
+  border: 2px solid red;	
+  }
+  input[type=text]:focus {
+  width: 50%;
+  }
+  input[type=password]:focus {
+  width: 50%;
+  }
+</style>
+<title>Form(Using All Attribute Of Form Tag)</title>
+</head>
+<body  background="images/apache.jpg";>
+<div class="marry" >
+<form action="for-mall" method="post">
+<label>Enter First Name</label><br>
+<input type="text" name="fn" required class="marry"/>
+<br>
+<label>Enter last Name</label><br>
+<input type="text" name="ln" class="marry"/>
+<br>
+<label>Enter Email-Id</label><br>
+<input type="email" name="email" class="marry"/>
+<br>
+<label>Enter Contact Number</label><br>
+<input type="tel" name="phone" class="marry"/>
+<br>
+<label>Gender</label>
+<input type="radio" name="gn" value="M" />Male &nbsp;&nbsp;&nbsp;<input type="radio" name="gn" value="F"/>Female
+<br>
+<label>Enter Age</label><br>
+<input type="password" name="page" class="marry"/><br>
+
+<label>Married</label>
+<input type="checkbox" name="marriage" value="Married" />
+<br>
+<label>Choose Date Of Birth</label><br>
+<input type="date" name="dob" class="marry"/>
+<br>
+<label>Choose Hobbies</label><br>
+<input type="checkbox" name="hb" value=0/>SLEEPING
+<input type="checkbox" name="hb" value=1/>STUDY
+<input type="checkbox" name="hb" value=2/>LISTENING SONG
+<input type="checkbox" name="hb" value=3/>PLAYING GAME
+<input type="checkbox" name="hb" value=4/>EATING FOOD
+<br><br>
+<label>Enter Address</label><br>
+<textarea rows="03" cols="20" name="ta"></textarea><br>
+<label>Enter Area PinCode</label><br>
+<input type="number" name="pc"class="marry" />
+<br>
+<label>Study Time</label><br>
+<input type="time" name="st"class="marry" />
+<br><br>
+<select name="edu" class="marry">
+<option value="Not Choosen Any Qualification level.">Choose Your Own Qualification.</option>
+<option >B.tech</option>
+<option >M.tech</option>
+<option >BCA</option>
+<option >MCA</option>
+<option >B.SC</option>
+<option >M.SC</option>
+</select><br><br>
+<select name="cour" class="marry" size="8" multiple>
+<optgroup value="" label="Choose Your Own (one or more than one) Courses Package."></optgroup>
+<option  selected>JAVA-PACKAGE</option>
+<option >ORACLE-PACKAGE</option>
+<option>C-PACKAGE</option>
+<option >.NET-PACKAGE</option>
+<option >PHP-PACKAGE</option>
+<option >PYTHON-PACKAGE</option>
+</select><br><br><label>Job Package Expected</label>
+<input type="range" name="range" title="10k to 50k" max="50" min="15"/><br><br>
+<label>Select Expected Month To Join The Class</label><br>
+<input type="month" name="mon"/><br><br>
+<label>Select Intersted Time Slot To Join The Class</label><br>
+<input type="time" name="ts" class="marry"/><br><br>
+<label>Give Favourite Url</label><br>
+<input type="url" name="url"/><br><br>
+<input type="submit" value="SUBMIT" class="but"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="reset" value="CANCEL" class="but"/>
+</form>
+
+</div>
+</body>
+</html>
