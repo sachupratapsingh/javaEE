@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <meta charset="ISO-8859-1"> -->
+<title>CORONA PATIENT FORM PAGE</title>
+<script type="text/javascript" src="js/corona.js"></script>
+<link rel="stylesheet" href="css/corona.css">
+</head>
+<body>
+<div class="marry" >
+<b class='marry1'><a href="cms_view">VIEW ALL PATIENT DETAILS.</a></b>
+<b class='marry1'><a href="CMS_Recovery">VIEW RECOVERY DETAILS.</a></b>
+<h1 class='marry1'><u >Corona Patient Register Form</u></h1>
+ <h2 style='text-align:center'>******Please fill in this form to store corona-patient details.******</h2><br>
+<form action="CoronaServlet" class="" onsubmit="return check(this)" method="post"> 
+<b ><label>PATIENT NAME:</label></b>
+<input type="text" style='margin-left:60px' name="pname" class="marry1" id="p"/><span id="sp1" style="color:red" class="h1"></span><br><br>
+
+<label><b >PATIENT STATUS:</b></label>
+<input type="radio" name="pstat" class="" style='margin-left:40px' value="nep" id="r1" onclick="fun1(this.value)">NEW PATIENT&nbsp;&nbsp;&nbsp;
+<input type="radio" name="pstat" class="" value="dip" id="r2" onclick="fun1(this.value)">DISCHARE PATIENT&nbsp;&nbsp;&nbsp;
+<input type="radio" name="pstat" class="" value="dep" id="r3" onclick="fun1(this.value)">DEAD PATIENT&nbsp;&nbsp;&nbsp;
+<input type="radio" name="pstat" class="" value="edit" id="r4" onclick="fun1(this.value)">  ALREADY ADMITS PATIENT(EDIT)<span id="sp5" style="color:red" class="h1"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+
+
+<label class="anim"><b>PATIENT AGE:</b></label>
+<input type="number" style='margin-left:73px' name="page" class="marry1" id="age"><span id="sp2" style="color:red" class="h1"></span><br><br>
+
+<label class="anim"><b>PATIENT GENDER:</b></label>
+<input type="radio" name="pgen" class="" style='margin-left:30px' value="M" id="gender">MALE
+<input type="radio" name="pgen" class="" value="F" id="gender1">FeMALE<span id="sp3" style="color:red" class="h1"></span><br><br>
+
+<label><b>PATIENT MOB-NO:</b></label>
+<input type="text" name="pmob" style='margin-left:40px' class="marry1"><span id="sp9" style="color:red" class="h1"></span><br><br>
+
+
+<label><b >PATIENT STATE:</b></label>
+<select class ="marry1" style='margin-left:57px' name="state" id="state">
+<option>------Select State------</option>
+<option>Andhra Pradesh</option>
+<option>Arunachal Pradesh</option>
+<option>Assam</option>
+<option>Bihar</option>
+<option>Chhattisgarh</option>
+<option>Goa</option>
+<option>Gujarat</option>
+<option>Haryana</option>
+<option>Himachal Pradesh</option>
+<option>Jharkhand</option>
+<option>Karnataka</option>
+<option>Kerala</option>
+<option>Madhya Pradesh</option>
+<option>Maharashtra</option>
+<option>Manipur</option>
+<option>Meghalaya</option>
+<option>Mizoram</option>
+<option>Nagaland</option>
+<option>Odisha</option>
+<option>Punjab</option>
+<option>Rajasthan</option>
+<option>Sikkim</option>
+<option>Tamil Nadu</option>
+<option>Telangana</option>
+<option>Tripura</option>
+<option>Uttar Pradesh</option>
+<option>Uttarakhand</option>
+<option>West Bengal</option>
+</select><span id="sp4" style="color:red" class="h1"></span><br><br>
+
+<label><b>PATIENT ADMIT-DATE:</b></label>
+<input type="date" style='margin-left:10px' name="pad" class="marry1" id="pad"><span id="sp6" style="color:red" class="h1"></span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+
+<label><b>PATIENT DISCHARGE-DATE:</b></label>
+<input type="date" style='margin-left:0px' name="pad1" class="marry1" id="pad1"><span id="sp7" style="color:red" class="h1"></span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+
+<label><b>PATIENT DEAD-DATE:</b></label>
+<input type="date" style='margin-left:18px' name="pad2" class="marry1" id="pad2"><span id="sp8" style="color:red" class="h1"></span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+
+<label><b>PATIENT NUMBER:</b></label>
+<input type="number" style='margin-left:40px' name="pno" class="marry1" id="pno1"><span id="sp10" style="color:red" class="h1"></span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+
+
+<input type="submit" value="ADD PATIENT" name="newp" class="but" id="b1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="submit" value="DISCHARGE PATIENT" name="disp" class="but" id="b2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="submit" value="DEAD PATIENT" name="deadp" class="but" id="b3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="submit" value="Edit & Update" name="editp" class="but" id="b4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+.marry
+{
+  background-color:#ffff99;
+  color:#9900ff;
+  border-radius:5px;
+  
+  margin-left:100px;
+  margin-right:100px;
+  input-text:center;
+  padding:15px 20px ;
+  border:2px solid red;
+  }
+  .marry1
+  {
+  background-color:#ffff99;
+  color:#9900ff;
+  border-radius:5px;
+  text-align:center;
+  margin-right:57px;
+ 
+  padding:10px 20px ;
+  border:2px solid red;
+  }
+  .but
+  {
+  background-color:#4CAF50;
+  border-radius:5px;
+  align:center;
+  text-align:center;
+  padding:10px 20px ;
+  color:white;
+  border: 2px solid red;
+  cursor: pointer;	
+  }
+  .b{
+  text-align:center;
+  }
+  input[type=text]:focus {
+  width: 50%;
+  }
+  input[type=password]:focus {
+  width: 50%;
+  }
+  
+  .h1 {
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 1.0vw;
+  font-weight: 900;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  background-size: 120% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -ms-background-clip: text;
+  -ms-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-image: linear-gradient(45deg, 
+                    #7794ff, 
+                    #44107A,
+                    #FF1361,
+                    #FFF800);
+  animation: .8s shake infinite alternate;
+}
+
+@keyframes shake {
+  0% { transform: skewX(-15deg); }
+  5% { transform: skewX(15deg); }
+  10% { transform: skewX(-15deg); }
+  15% { transform: skewX(15deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); } 
+  }
+  a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+} 

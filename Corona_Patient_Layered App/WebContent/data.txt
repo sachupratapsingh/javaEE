@@ -1,0 +1,72 @@
+package com.corona.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.corona.dao.CoronaDaoImpl;
+import com.corona.vo.CoronaVo;
+
+@WebServlet("/cms_view")
+public class CoronaMainServlet_view extends HttpServlet {
+	 CoronaDaoImpl cdi;
+    public CoronaMainServlet_view() {
+    	super();
+    	cdi=new CoronaDaoImpl();
+        // TODO Auto-generated constructor stub
+    }
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		PrintWriter pw=null;
+		pw=res.getWriter();
+		int i=1;
+		res.setContentType("text/html");
+		pw.println("<html>");
+		pw.println("<head>");
+		pw.println("<title>All Corona Patient Data</title>");
+		
+		pw.println("</head>");
+		pw.println("<body>");
+		pw.println("<script>");
+		pw.println("function fun1(){ document.getElementById(\"i1\").disabled=false;"
+				+ "}");
+		pw.println("</script>");
+		pw.println("<form action='cms_view' method='post'>");
+		pw.println("<table width:100% bgcolor='pink' align='center'>");
+		try {
+			ArrayList<CoronaVo> li=cdi.view();
+			for(CoronaVo cvo:li ) {
+				if(i==1)
+		pw.println("<tr bgcolor='red'><th style='padding:5px';>PATIENT-NAME</th><th>PATIENT-AGE</th><th>PATIENT-MOB</th><th>PATIENT-HOME-STATE</th><th>GENDER</th><th>STATUS</th><th>ADMIT-DATE</th><th>DISCHARGE-DATE</th><th>DEAD-DATE</th><th>PATIENT-NO</th><th>EDIT</th></tr>");
+		pw.println("<tr bgcolor='cyan'><td style='padding:5px';>"+cvo.getPatient_name()+"</td><td>"+cvo.getAge()+"</td><td>"+cvo.getMob()+"</td><td>"+cvo.getHome_state()+"</td><td>"+cvo.getGender()+"</td><td>"+cvo.getStatus()+"</td><td>"+cvo.getAdmit_date()+"</td><td>"+cvo.getDischarge_date()+"</td><td>"+cvo.getDead_date()+"</td><td>"+cvo.getPatient_no()+"</td><td>"+"<a href='CoronaServlet?pname='"+req.getParameter("i1")+"&page="+req.getParameter("i2")+"&state="+req.getParameter("i4")+"&pgen="+req.getParameter("i5")+"&pmob="+req.getParameter("i3")+"&pno="+cvo.getPatient_no()+">EDIT</a>"+"</td></tr>");
+				   i++;
+				}//for loop
+			pw.println("<tr bgcolor='red'><td style='padding:5px';><input type='text' name=\"i1\" ></td><td><input type='text' name='i2' ></th><td><input type='text'  name='i3' ></td><td><input type='text' name='i4' ></td><td><input type='text'name='i5' ></td><td></td><td></td><td></td><td></td><td></td><td><input type='submit'></td></tr>");
+			
+			pw.println("</table>");
+			pw.println("</form>");
+			pw.println("</body>");
+			pw.println("</html>");
+			}//try
+		catch (Exception e) {
+        System.out.println("Error is:: "+e);
+			e.printStackTrace();
+		}//catch
+		pw.println("<table>");
+		if(i==1) 
+		pw.println("<h1 style='color:red;text-align:center'>No Records.</h1>");
+		pw.println("<h1 style='color:blue;text-align:center'><a style='text-decoration:none' href='corona_patient.html'>Home Page</a></h1>");
+			}//if
+	
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

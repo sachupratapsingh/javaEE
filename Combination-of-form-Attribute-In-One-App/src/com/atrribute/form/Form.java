@@ -19,7 +19,10 @@ public class Form extends HttpServlet {
 		String address=null,edu=null,cour[]=null,ts=null,st=null,range=null,url=null,dob=null,month=null;
 		int age=0,pin=0;
 		long mob=0;
+		String n=req.getParameter("name");
+		System.out.println(n+"::::::::::::::");
 		fn=req.getParameter("fn");
+		System.out.println(fn+";;;;;;;;;;;");
 		ln=req.getParameter("ln");
 		email=req.getParameter("email");
 		gen=req.getParameter("gn");
